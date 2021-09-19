@@ -109,7 +109,7 @@ app.get('*', (req, res, next) => {
   res.send(errorHtml);
 });
 
-const PORT = 1326;
+const { PORT = 1337 } = process.env;
 
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
